@@ -15,7 +15,6 @@ const fetchNews = async()=>{
     const response = await fetch(`${process.env.SERVER_DOMAIN}/api/news`)
     const res = await response.json()
     return res.news
-
 }
 
 
