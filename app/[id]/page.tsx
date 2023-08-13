@@ -4,7 +4,7 @@ import { Metadata, ResolvingMetadata } from "next"
 
 const fetchNewsItem = async(id:String)=>{
     const res = await fetch(`${process.env.SERVER_DOMAIN}/api/${id}`)
-    const news = await res.json()
+    const {news} = await res.json()
     return news
 }
 
@@ -22,7 +22,7 @@ type Props = {
     // fetch data
 try {
     const response = await fetch(`${process.env.SERVER_DOMAIN}/api/${id}`)
-    var news = await response.json()
+    var {news} = await response.json()
     console.log(news.metadata)
 } catch (error) {
     console.log(error)
