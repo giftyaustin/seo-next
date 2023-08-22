@@ -25,7 +25,10 @@ const page = async () => {
     <ul>
         {news.map((c:News)=>{
             return(
-                <li key={c.headline}><Link href={`/${c.id}`}>{c.headline}</Link></li>
+                <>
+                <li className=" my-4" key={c.headline}><Link className="text-cyan-800 underline" href={`/${c.id}`}>{c.headline}</Link></li>
+               
+                </>
             )
         })}
     </ul>
