@@ -19,7 +19,7 @@ export async function generateMetadata(
 
   // fetch data
   try {
-    const response = await fetch(`${process.env.SERVER_DOMAIN}/api/${id}`);
+    const response = await fetch(`${process.env.SERVER_DOMAIN}/api/${id}`,{cache:'no-cache'});
     var { news } = await response.json();
   } catch (error) {
     console.log("===== some error occured =====", error);
