@@ -18,6 +18,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  authors:{name:'Coinearth'}
 };
 export default function RootLayout({
   children,
